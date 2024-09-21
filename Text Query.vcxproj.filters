@@ -42,5 +42,13 @@
     <ClInclude Include="OrQuery.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="Text_Query_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>

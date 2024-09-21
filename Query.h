@@ -10,6 +10,8 @@ class Query
 	friend Query operator&(const Query&,const Query&);
 
 public:
+	Query() = default;
+
 	Query(const std::string&);//构建一个新的wordQuery
     
 	QueryResult eval(const TextQuery& t)const
@@ -25,6 +27,7 @@ public:
 private:
 	Query(std::shared_ptr<Query_base> query) :q(query)
 	{
+
 	}
 
 	std::shared_ptr<Query_base> q;

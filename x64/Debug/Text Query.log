@@ -1,0 +1,4 @@
+﻿  main.cpp
+D:\Visual Studio 2022\source\repos\Text Query\Text Query\TextQuery.h(29,9): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+D:\Visual Studio 2022\source\repos\Text Query\Text Query\Query.h(41,1): warning C4717: “operator<<”: 如递归所有控件路径，函数将导致运行时堆栈溢出
+  Text Query.vcxproj -> D:\Visual Studio 2022\source\repos\Text Query\x64\Debug\Text Query.exe

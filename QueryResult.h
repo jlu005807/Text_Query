@@ -1,5 +1,6 @@
 #pragma once
 #include<iostream>
+#include<algorithm>
 #include<fstream>//!!!文件操作
 #include<sstream>//!!!string流
 #include<string>
@@ -16,12 +17,27 @@ std::string make_plural(size_t ctr, const std::string& word, const std::string& 
 
 class QueryResult
 {
-	friend std::ostream& print(std::ostream&, const QueryResult&);
+	friend std::ostream& print_t(std::ostream&, const QueryResult&);
 
 	using line_no = std::vector<std::string>::size_type;
 public:
 	QueryResult(std::string s, std::shared_ptr<std::set<line_no>> p, std::shared_ptr<std::vector<std::string>> f):sought(s),lines(p),file(f) {
 
+	}
+
+	std::set<line_no>::iterator begin()const
+	{
+		return lines->begin();
+	}
+
+	std::set<line_no>::iterator end()const
+	{
+		return lines->end();
+	}
+
+	std::shared_ptr<std::vector<std::string>> get_file()const
+	{
+		return file;
 	}
 
 private:
@@ -33,7 +49,7 @@ private:
 	std::shared_ptr<std::vector<std::string>> file;//输入文件
 };
 
-std::ostream& print(std::ostream& os, const QueryResult& qr)
+std::ostream& print_t(std::ostream& os, const QueryResult& qr)
 {
 	//如果找到单词，打印出现次数和所有出现的位置
 	os << qr.sought << " occurs " << qr.lines->size() << " " << make_plural(qr.lines->size(), "time", "s") << std::endl;
