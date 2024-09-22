@@ -1,10 +1,11 @@
-#include"Text_Query_manager.h"
+#define _CRT_SECURE_NO_WARNINGS
+#include"General_manager.h"
 
 int main()
 {
-	manager my;
+	General_manager manager;
 
-	my.run();
+	manager.text_query();
 
 	system("pause");
 

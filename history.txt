@@ -1,0 +1,6 @@
+me      time:Sun Sep 22 19:52:28 2024
+D:/Visual Studio 2022/source/repos/Text Query/Text Query/ozy.txt
+any      time:Sun Sep 22 19:52:43 2024
+D:/Visual Studio 2022/source/repos/Text Query/Text Query/ozy.txt
+my      time:Sun Sep 22 19:53:05 2024
+D:/Visual Studio 2022/source/repos/Text Query/Text Query/ozy.txt

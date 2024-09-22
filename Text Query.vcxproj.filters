@@ -42,7 +42,13 @@
     <ClInclude Include="OrQuery.h">
       <Filter>头文件</Filter>
     </ClInclude>
-    <ClInclude Include="Text_Query_manager.h">
+    <ClInclude Include="Query_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="History_manager.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="General_manager.h">
       <Filter>头文件</Filter>
     </ClInclude>
   </ItemGroup>

@@ -129,13 +129,15 @@
   <ItemGroup>
     <ClInclude Include="AndQuery.h" />
     <ClInclude Include="BinaryQuery.h" />
+    <ClInclude Include="General_manager.h" />
+    <ClInclude Include="History_manager.h" />
     <ClInclude Include="NotQuery.h" />
     <ClInclude Include="OrQuery.h" />
     <ClInclude Include="Query.h" />
     <ClInclude Include="QueryResult.h" />
     <ClInclude Include="Query_base.h" />
     <ClInclude Include="TextQuery.h" />
-    <ClInclude Include="Text_Query_manager.h" />
+    <ClInclude Include="Query_manager.h" />
     <ClInclude Include="WordQuery.h" />
   </ItemGroup>
   <ItemGroup>
