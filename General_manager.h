@@ -25,6 +25,7 @@ public:
 		std::cout << "Please select your choice:" << std::endl;
 		std::cout << "          1-query         " << std::endl;
 		std::cout << "          2-history       " << std::endl;
+		std::cout << "          3-clear         " << std::endl;
 		std::cout << "          0-exit          " << std::endl;
 	}
 
@@ -35,6 +36,14 @@ public:
 		std::string file_path;
 		std::getline(std::cin, file_path);
 		file_path = convertAndTrim(file_path);
+
+		std::ifstream file(file_path);
+
+		if (!file)
+		{
+			std::cout << "can not open file" << std::endl;
+			return;
+		}
 
 		std::cout << "Please input the word you want to find" << std::endl;
 		std::cout << "E.g: word & ~word | word" << std::endl;//取反时没有空格
@@ -50,7 +59,7 @@ public:
 
 		history_manager.add_document(document, file_path);
 
-		query_manager.run(file_path, sentence);
+		query_manager.run(file, sentence);
 
 	}
 
@@ -108,6 +117,10 @@ public:
 				break;
 			case 2:
 				open_history();
+				break;
+			case 3:
+				history_manager.clear();
+				std::cout << "successfullu clear the history" << std::endl;
 				break;
 			default:
 				std::cout << "No Zuo No Died!" << std::endl;

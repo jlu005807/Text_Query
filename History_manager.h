@@ -20,6 +20,19 @@ public:
 		load();
 	}
 
+	void clear()
+	{
+		std::fstream file("history.txt");
+
+		if (!file)
+		{
+			throw std::exception();
+		}
+
+		file.close();
+
+		size = 0;
+	}
 
 	void load()//ÏÂÔØ¼ÇÂ¼
 	{

@@ -7,15 +7,9 @@
 class Query_manager
 {
 public:
-	void run(std::string file_path,std::string sentence)
+	void run(std::ifstream& file,std::string sentence)
 	{
-		std::ifstream file(file_path);
-
-		if (!file)
-		{
-			throw std::exception();
-		}
-
+		
 		TextQuery text(file);
 
 		std::stringstream master(sentence);
